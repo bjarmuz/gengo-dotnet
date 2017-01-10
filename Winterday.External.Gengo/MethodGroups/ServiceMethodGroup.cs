@@ -77,7 +77,7 @@ namespace Winterday.External.Gengo.MethodGroups
         /// <returns>Task yielding array of language pairs</returns>
         public async Task<LanguagePair[]> GetLanguagePairs()
         {
-            var json = await _client.GetJsonAsync<JArray>(UriPartLanguagePairs, false);
+            var json = await _client.GetJsonAsync<JArray>(UriPartLanguagePairs, true);
 
             return json.Values<JObject>().Select(
                 e => new LanguagePair(e)).ToArray();
