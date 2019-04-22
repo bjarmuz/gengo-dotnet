@@ -100,3 +100,4 @@ Todo
 
 * Refactor out some redundancy
 * Inclue StyleCop in build process and get rid of any errors
+TEST
